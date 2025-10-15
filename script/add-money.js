@@ -9,13 +9,17 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     const currentAmount = document.getElementById('current-amount').innerText;
     const convertedCurrentAmount = parseFloat(currentAmount);
 
-    if (convertedPinNumber === 1234) {
-        // alert('Transaction successful!');
-        const sum = convertedCurrentAmount + convertedAmount;
-        console.log(sum);
-        document.getElementById('current-amount').innerText = sum;
+    if (convertedAmount && pinNumber) {
+        if (convertedPinNumber === 1234) {
+            const sum = convertedCurrentAmount + convertedAmount;
+            document.getElementById('current-amount').innerText = sum;
+            alert('Transaction successful! You have added $' + convertedAmount + ' to your account.');
+        } else {
+            alert('Invalid pin. Transaction failed.');
+        }
+        
     } else {
-        // alert('Invalid pin. Transaction failed.');
+        alert('Please enter an amount.');
     }
 
  });
