@@ -84,20 +84,21 @@
              <!-- cash out section -->
               <section id="cashOut" class="mt-10 p-4 ">
                 <h2 class="font-bold text-slate-900 text-xl p-4 flex justify-center items-center">Cash Out</h2>
-                <fieldset class="fieldset">
+                <fieldset class="fieldset max-w-sm mx-auto">
                     <label class="label font-bold text-slate-900 text-lg">Account Number</label>
                     <input value="12345678910" id="account-number" type="number" class="input" placeholder="Type your account number"
                         required />
                     <label class="label font-bold text-slate-900 text-lg">Amount</label>
-                    <input id="amount" type="number" class="input" placeholder="Type your amount" required />
+                    <input id="cashout-amount" type="number" class="input" placeholder="Type your amount" required />
                     <label class="label font-bold text-slate-900 text-lg">Pin</label>
-                    <input id="pin-number" type="text" class="input" placeholder="Type your pin" required />
+                    <input value="1234" id="cashOut-pin-number" type="text" class="input" placeholder="Type your pin" required />
                     <div><a class="link link-hover">Forgot pin?</a></div>
-                    <button id="add-money-btn" class="btn btn-neutral bg-slate-900 mt-4">Cash Out</button>
+                    <button id="cash-out-btn" class="btn btn-neutral bg-slate-900 mt-4">Cash Out</button>
                 </fieldset>
               </section>
              <script src="./script/add-money.js"></script>
              <script src="./script/toggle.js"></script>
+             <script src="./script/cash-out.js"></script>
         </header>
     </section>
 </body>
