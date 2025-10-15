@@ -14,7 +14,7 @@
             <nav class="flex justify-around items-center">
                 <img src="payloo_logo.png" alt="Payloo Logo" class="h-20 w-20">
                 <div>
-                    <h1 class="font-bold text-2xl">$ 5050</h1>
+                    <h1 class="font-bold text-2xl">$ <span id="current-amount">5050</span></h1>
                     <p class="text-lg border rounded p-1">Available Balance</p>
                 </div>
                 <button class="btn border-none bg-slate-900 text-white">Log Out</button>
@@ -23,8 +23,8 @@
             <hr class="my-4 border-gray-300">
             <!-- main section -->
             <section class="mt-5">
-                <h1 class="text-2xl font-bold mb-2">Welcome to Payloo!</h1>
-                <p>This is your main dashboard where you can view your account balance, recent transactions, and manage your finances with ease.</p>
+                <h1 class="text-2xl font-bold mb-2 p-1">Welcome to Payloo!</h1>
+                <p class="p-1">This is your main dashboard where you can view your account balance, recent transactions, and manage your finances with ease.</p>
                 <div class="cards grid grid-cols-3 mt-4 gap-2 p-2">
                     <div class="box cursor-pointer mt-3 p-4 border rounded text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
@@ -52,15 +52,14 @@
                     </div>
                 </div>
             </section>
-
             <!-- add money section -->
              <section>
-                <h2 class="font-bold text-slate-900">Add Money</h2>
+                <h2 class="font-bold text-slate-900 text-xl p-4">Add Money</h2>
                 <div>
                     <div class="hero-content flex-col lg:flex-row-reverse">
                         <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                             <div class="card-body">
-                                <legend>Select Bank</legend>
+                                <legend class="font-bold text-slate-900 text-lg">Select Bank</legend>
                                 <select class="select">
                                     <option disabled selected>Select Bank</option>
                                     <option value="Bkash">Bkash</option>
@@ -69,18 +68,20 @@
                                 </select>
                                 <fieldset class="fieldset">
                                     <label class="label font-bold text-slate-900 text-lg">Account Number</label>
-                                    <input value="12345678910" id="account-number" type="number" class="input" placeholder="Type your account number"
-                                        required />
+                                    <input value="12345678910" id="account-number" type="number" class="input" placeholder="Type your account number" required />
+                                    <label class="label font-bold text-slate-900 text-lg">Amount</label>
+                                    <input id="amount" type="number" class="input" placeholder="Type your amount" required />
                                     <label class="label font-bold text-slate-900 text-lg">Pin</label>
                                     <input id="pin-number" type="text" class="input" placeholder="Type your pin" required />
                                     <div><a class="link link-hover">Forgot pin?</a></div>
-                                    <button id="login-btn" class="btn btn-neutral bg-slate-900 mt-4">Login</button>
+                                    <button id="add-money-btn" class="btn btn-neutral bg-slate-900 mt-4">Add Money</button>
                                 </fieldset>
                             </div>
                         </div>
                     </div>
                 </div>
              </section>
+             <script src="./script/add-money.js"></script>
         </header>
     </section>
 </body>
