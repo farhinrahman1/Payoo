@@ -12,7 +12,7 @@ document.getElementById('login-btn').addEventListener('click', function (event) 
         // console.log('Valid account number');
         if (convertedPinNumber === 1234) {
             // console.log('Login successful')
-            //to redirect to another page, here main.html
+            //to redirect to another page, here main.html if the account number and pin are correct
             window.location.href="./main.html"
         }else { alert('Invalid pin number'); }
     } else {

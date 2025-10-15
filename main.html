@@ -4,8 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h1>Main page yes</h1>
+<body class="bg-slate-900">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-white">
+        <header>
+            <!-- navbar -->
+            <nav class="flex justify-around items-center">
+                <img src="payloo_logo.png" alt="Payloo Logo" class="h-20 w-20">
+                <div>
+                    <h1 class="font-bold text-2xl">$ 5050</h1>
+                    <p class="text-lg border rounded p-1">Available Balance</p>
+                </div>
+                <button class="btn border-none bg-slate-900 text-white">Log Out</button>
+            </nav>
+            <!-- how to give a gray line after the navbar -->
+            <hr class="my-4 border-gray-300">
+            <!-- main section -->
+            <section class="mt-5">
+                <h1 class="text-2xl font-bold mb-2">Welcome to Payloo!</h1>
+                <p>This is your main dashboard where you can view your account balance, recent transactions, and manage your finances with ease.</p>
+                <div class="cards grid grid-cols-3 mt-4 gap-2 p-2">
+                    <div class="box cursor-pointer mt-3 p-4 border rounded text-center rounded-sm">
+                        <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
+                        <h3>Add money</h3>
+                    </div>
+                    <div class="box cursor-pointer mt-3 p-4 border rounded text-center rounded-sm">
+                        <img class="w-8 mx-auto" src="./assets/purse1.png" alt="">
+                        <h3>Cash Out</h3>
+                    </div>
+                    <div class="box cursor-pointer mt-3 p-4 border rounded text-center rounded-sm">
+                        <img class="w-8 mx-auto" src="./assets/send1.png" alt="">
+                        <h3>Pay Bill</h3>
+                    </div>
+                    <div class="box cursor-pointer mt-3 p-4 border rounded text-center rounded-sm">
+                        <img class="w-8 mx-auto" src="./assets/money1.png" alt="">
+                        <h3>Transfer Money</h3>
+                    </div>
+                    <div class="box cursor-pointer mt-3 p-4 border rounded text-center rounded-sm">
+                        <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="">
+                        <h3>Get Bonus</h3>
+                    </div>
+                    <div class="box cursor-pointer mt-3 p-4 border rounded text-center rounded-sm">
+                        <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
+                        <h3>Transaction History</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- add money section -->
+             <section>
+                <h2 class="font-bold text-slate-900">Add Money</h2>
+                <div>
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                            <div class="card-body">
+                                <legend>Select Bank</legend>
+                                <select class="select">
+                                    <option disabled selected>Select Bank</option>
+                                    <option value="Bkash">Bkash</option>
+                                    <option value="Nagad">Nagad</option>
+                                    <option value="DBBL">DBBL</option>
+                                </select>
+                                <fieldset class="fieldset">
+                                    <label class="label font-bold text-slate-900 text-lg">Account Number</label>
+                                    <input value="12345678910" id="account-number" type="number" class="input" placeholder="Type your account number"
+                                        required />
+                                    <label class="label font-bold text-slate-900 text-lg">Pin</label>
+                                    <input id="pin-number" type="text" class="input" placeholder="Type your pin" required />
+                                    <div><a class="link link-hover">Forgot pin?</a></div>
+                                    <button id="login-btn" class="btn btn-neutral bg-slate-900 mt-4">Login</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+        </header>
+    </section>
 </body>
 </html>
